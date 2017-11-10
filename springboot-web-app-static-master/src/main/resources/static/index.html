@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width", initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+ <style>
+       #map {
+        height: 600px;
+        width: 100%;
+       }
+    </style>
+
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<script type="text/javascript">
+
+function initMap() {
+	var options = {
+		zoom: 6,
+        center: {lat: 22.5726, lng: 88.3639}
+	}
+        var map = new google.maps.Map(document.getElementById('map'), options);
+
+
+
+//var xmlhttp = new XMLHttpRequest();
+
+
+if (window.XMLHttpRequest) {
+		//for firefox, opera and safari browswers
+		var xmlhttp = new XMLHttpRequest();
+	}
+	if (typeof XMLHttpRequest == "undefined")
+  XMLHttpRequest = function () {
+    try { return new ActiveXObject("Msxml2.XMLHTTP.6.0"); }
+      catch (e) {}
+    try { return new ActiveXObject("Msxml2.XMLHTTP.3.0"); }
+      catch (e) {}
+    try { return new ActiveXObject("Msxml2.XMLHTTP"); }
+      catch (e) {}
+    //Microsoft.XMLHTTP points to Msxml2.XMLHTTP.3.0 and is redundant
+    throw new Error("This browser does not support XMLHttpRequest.");
+  };
+
+
+var url = "http://168.1.141.9:32033/read?transportNo=WB06M5694&travelDate=07/11/2017";
+//var url = "http://168.1.141.9:32459/sample";
+//var url = "myTutorials.txt";
+
+
+
+
+xmlhttp.open('GET', url, true);
+
+xmlhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+
+xmlhttp.send();
+//document.getElementById("map").innerHTML =xmlhttp.status;
+//document.getElementById("map").innerHTML =url+'<br><br>';
+xmlhttp.onreadystatechange = function() {
+	//document.getElementById("map").innerHTML =this.status;
+    if (this.readyState == 4 && this.status == 200) {
+	//document.getElementById("map").innerHTML =this.status;
+        var myArr = JSON.parse(this.responseText);
+	//document.getElementById("map").innerHTML =myArr;
+        myFunction(myArr);
+    }
+};
+
+//var myArr = JSON.parse(this.responseText);
+//myFunction(myArr);
+
+var lat_lng=[];
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        //out = '{"lat":  arr[i].latitude , "lng": arr[i].longitude }';
+	var lat;
+	var lng;
+	lat=arr[i].latitude;
+	lng = arr[i].longitude;
+
+	out = '\"lat\":'  +lat+ ', \"lng\":'+ lng;
+	///document.getElementById("map").innerHTML = out;
+	//out = JSON.parse('{"lat": 22.5867, "lng": 88.4171}');
+	//document.getElementById("map").innerHTML = JSON.parse('{'+out+'}');
+	var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+	
+	if(i>0)
+	{
+		lat_lng.push(JSON.parse('{'+out+'}'));
+		addMarker({coords:JSON.parse('{'+out+'}')}); //Working for static content
+		
+	}
+	else
+	{
+		lat_lng.push(JSON.parse('{'+out+'}'));
+		addMarker({coords:JSON.parse('{'+out+'}'),iconimage:image}); //Working for static content
+		
+	}
+
+	//addMarker(JSON.parse('{"lat": 22.5867, "lng": 88.4171}'));
+    }
+    //document.getElementById("map").innerHTML = out.toString();
+}
+
+//addMarker({lat: 22.5867, lng: 88.4171});
+function addMarker(props){
+		var marker = new google.maps.Marker({
+          	position: props.coords,
+          	map: map,
+          	icon: props.iconimage
+        	});
+	}
+      }
+
+//Initialize the Path Array
+        var path = new google.maps.MVCArray();
+        //Initialize the Direction Service
+        var service = new google.maps.DirectionsService();
+ 
+        //Set the Path Stroke Color
+        var poly = new google.maps.Polyline({ map: map, strokeColor: '#4986E7' });
+ 
+        //Loop and Draw Path Route between the Points on MAP
+        for (var i = 0; i < lat_lng.length; i++) {
+            if ((i + 1) < lat_lng.length) {
+                var src = lat_lng[i];
+                var des = lat_lng[i + 1];
+                path.push(src);
+                poly.setPath(path);
+                service.route({
+                    origin: src,
+                    destination: des,
+                    travelMode: google.maps.DirectionsTravelMode.DRIVING
+                }, function (result, status) {
+                    if (status == google.maps.DirectionsStatus.OK) {
+                        for (var i = 0, len = result.routes[0].overview_path.length; i < len; i++) {
+                            path.push(result.routes[0].overview_path[i]);
+                        }
+                    }
+                });
+            }
+        }
+
+</script>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhhgYoGlM5JIjz0UEfDnUoPcCHv1MBukA&callback=initMap">
+</script>
+
+
+</body>
+</html>

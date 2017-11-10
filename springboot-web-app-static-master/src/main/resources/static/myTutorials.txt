@@ -1,0 +1,182 @@
+[
+      {
+      "id": "59f972ddbd94940005d6758a",
+      "transportNo": "WB06M5694",
+      "temp": "17",
+      "humid": "55",
+      "longitude": "88.4171",
+      "latitude": "22.5867",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f972e1bd94940005d6758b",
+      "transportNo": "WB06M5694",
+      "temp": "18.5",
+      "humid": "61",
+      "longitude": "88.4796",
+      "latitude": "22.5765",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f972e7bd94940005d6758c",
+      "transportNo": "WB06M5694",
+      "temp": "20",
+      "humid": "68",
+      "longitude": "88.4317",
+      "latitude": "22.6471",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f972ebbd94940005d6758d",
+      "transportNo": "WB06M5694",
+      "temp": "21.5",
+      "humid": "65",
+      "longitude": "88.4654",
+      "latitude": "22.6925",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f972f1bd94940005d6758e",
+      "transportNo": "WB06M5694",
+      "temp": "23",
+      "humid": "60",
+      "longitude": "88.4806",
+      "latitude": "22.7228",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f972f6bd94940005d6758f",
+      "transportNo": "WB06M5694",
+      "temp": "24",
+      "humid": "53",
+      "longitude": "88.65375",
+      "latitude": "22.8378",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f972fbbd94940005d67590",
+      "transportNo": "WB06M5694",
+      "temp": "22.2",
+      "humid": "49",
+      "longitude": "90.4125",
+      "latitude": "23.8103",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f97300bd94940005d67591",
+      "transportNo": "WB06M5694",
+      "temp": "19",
+      "humid": "45",
+      "longitude": "90.0373",
+      "latitude": "23.0488",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f97305bd94940005d67592",
+      "transportNo": "WB06M5694",
+      "temp": "18",
+      "humid": "47",
+      "longitude": "89.9948",
+      "latitude": "24.3917",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f9730abd94940005d67593",
+      "transportNo": "WB06M5694",
+      "temp": "15",
+      "humid": "50",
+      "longitude": "88.3639",
+      "latitude": "22.5726",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f9730fbd94940005d67594",
+      "transportNo": "WB06M5694",
+      "temp": "17",
+      "humid": "55",
+      "longitude": "88.4171",
+      "latitude": "22.5867",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f97314bd94940005d67595",
+      "transportNo": "WB06M5694",
+      "temp": "18.5",
+      "humid": "61",
+      "longitude": "88.4796",
+      "latitude": "22.5765",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f97319bd94940005d67596",
+      "transportNo": "WB06M5694",
+      "temp": "20",
+      "humid": "68",
+      "longitude": "88.4317",
+      "latitude": "22.6471",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f9731ebd94940005d67597",
+      "transportNo": "WB06M5694",
+      "temp": "21.5",
+      "humid": "65",
+      "longitude": "88.4654",
+      "latitude": "22.6925",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f97323bd94940005d67598",
+      "transportNo": "WB06M5694",
+      "temp": "23",
+      "humid": "60",
+      "longitude": "88.4806",
+      "latitude": "22.7228",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f97328bd94940005d67599",
+      "transportNo": "WB06M5694",
+      "temp": "24",
+      "humid": "53",
+      "longitude": "88.65375",
+      "latitude": "22.8378",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f9732dbd94940005d6759a",
+      "transportNo": "WB06M5694",
+      "temp": "22.2",
+      "humid": "49",
+      "longitude": "90.4125",
+      "latitude": "23.8103",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f97332bd94940005d6759b",
+      "transportNo": "WB06M5694",
+      "temp": "19",
+      "humid": "45",
+      "longitude": "90.0373",
+      "latitude": "23.0488",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f97337bd94940005d6759c",
+      "transportNo": "WB06M5694",
+      "temp": "18",
+      "humid": "47",
+      "longitude": "89.9948",
+      "latitude": "24.3917",
+      "travelDate": "01/11/2017"
+   },
+      {
+      "id": "59f9733cbd94940005d6759d",
+      "transportNo": "WB06M5694",
+      "temp": "15",
+      "humid": "50",
+      "longitude": "88.3639",
+      "latitude": "22.5726",
+      "travelDate": "01/11/2017"
+   }
+]
