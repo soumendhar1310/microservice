@@ -2,7 +2,7 @@
       {
       "id": "59f972ddbd94940005d6758a",
       "transportNo": "WB06M5694",
-      "temp": "18",
+      "temp": "21",
       "humid": "55",
       "longitude": "88.4171",
       "latitude": "22.5867",
