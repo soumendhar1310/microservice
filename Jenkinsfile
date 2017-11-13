@@ -14,3 +14,4 @@ node {
             env.version = pom.version
         }
     }
+}
